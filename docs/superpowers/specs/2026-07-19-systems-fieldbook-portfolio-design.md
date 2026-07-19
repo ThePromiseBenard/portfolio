@@ -1,6 +1,6 @@
 # Systems Fieldbook Portfolio — Product Requirements and Design Specification
 
-- **Status:** Awaiting written-spec review
+- **Status:** Approved for implementation planning
 - **Date:** 19 July 2026
 - **Product:** Personal systems-engineering portfolio
 - **Reference:** [James Akpan — Product Engineer](https://jamesakpan.com/)
