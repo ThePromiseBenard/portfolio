@@ -7,12 +7,12 @@ source hierarchy:
 
 - `DESIGN.md`: normative visual tokens, components, motion, and accessibility rules.
 - `docs/superpowers/specs/`: approved product requirements.
-- `docs/superpowers/plans/`: Paper design and implementation plans.
+- `docs/superpowers/plans/`: Google Stitch design and implementation plans.
 
 The approved foundation plan will introduce `src/app/` for routes, `src/components/`
 for shared UI, `src/features/` for content and metadata logic, `src/styles/` for CSS
 tokens, `content/` for typed MDX, and `tests/e2e/` for browser coverage. Do not begin
-application implementation until the Paper handoff records Gate D5 approval.
+application implementation until the Google Stitch handoff records Gate D5 approval.
 
 ## Build, Test, and Development Commands
 
@@ -53,7 +53,7 @@ Use Conventional Commits: `type(scope): imperative subject`, for example
 `feat(navigation): add active scene indicator`. Keep commits scoped and never bypass
 hooks. Pull requests must explain the change, link relevant issues or plans, list
 verification performed, and include desktop/mobile screenshots for visual work.
-Call out `DESIGN.md` or Paper deviations explicitly.
+Call out `DESIGN.md` or Google Stitch deviations explicitly.
 
 ## Security & Content Safety
 

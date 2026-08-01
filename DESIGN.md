@@ -455,10 +455,10 @@ announcements. Reduced motion must not remove information.
 
 ## Accessibility
 
-Target WCAG 2.2 AA from the first design review. Paper mockups and implementation must
-show visible focus states, keyboard order, 44px targets, safe-area behaviour, and text
-alternatives for diagrams. All layouts must remain understandable at 200% zoom and
-without colour.
+Target WCAG 2.2 AA from the first design review. Google Stitch designs and
+implementation must show visible focus states, keyboard order, 44px targets,
+safe-area behaviour, and text alternatives for diagrams. All layouts must remain
+understandable at 200% zoom and without colour.
 
 Use one visible `h1` per public route, semantic landmarks, a skip link, descriptive
 link text, named icon controls, and logical heading order. Connect traps focus while

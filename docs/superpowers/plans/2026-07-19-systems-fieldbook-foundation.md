@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** After the Paper design is explicitly approved, build a runnable, accessible Next.js foundation with typed local content, base collection routes, metadata, feeds, and automated quality gates for the Systems Fieldbook portfolio.
+**Goal:** After the Google Stitch design is explicitly approved, build a runnable, accessible Next.js foundation with typed local content, base collection routes, metadata, feeds, and automated quality gates for the Systems Fieldbook portfolio.
 
 **Architecture:** The App Router statically renders public content from validated MDX files. Server Components own content and metadata; client-side code is deferred to the later cinematic-experience plan. The foundation exposes focused content, shell, metadata, and styling modules that later plans can extend without rewriting infrastructure.
 
@@ -14,7 +14,7 @@
 
 The approved PRD contains several independently testable systems and should not be executed as one oversized change. A visual-design plan now precedes all implementation. The sequence is:
 
-0. **Paper design production:** `docs/superpowers/plans/2026-07-19-systems-fieldbook-paper-design.md` — foundations, components, low- and high-fidelity screens, responsive variants, prototype, accessibility review, and explicit owner approval.
+0. **Google Stitch design production:** `docs/superpowers/plans/2026-07-19-systems-fieldbook-google-stitch-design.md` — foundations, components, low- and high-fidelity screens, responsive variants, prototype, accessibility review, and explicit owner approval.
 1. **Foundation — this plan:** application shell, approved design tokens, content validation, collection routes, metadata, feeds, accessibility smoke tests, and CI.
 2. **Core cinematic experience:** full-viewport stage, scene state, navigation, workspaces, responsive composition, About, Experience, and Connect.
 3. **Case studies and publishing:** detailed system reports, MDX rendering, architecture diagrams, Engineering Notes, Life Notes, and related-content navigation.
@@ -27,12 +27,14 @@ This plan intentionally ships honest empty states instead of invented personal c
 Do not run Task 1 until every condition below is true:
 
 - Root `DESIGN.md` passes `npx @google/design.md lint DESIGN.md --format text` with zero errors and zero warnings.
-- Paper contains the approved foundations, components, complete screen inventory, desktop and compact variants, prototype, reduced-motion path, accessibility annotations, and edge states defined by Plan 0.
-- `docs/design/paper-handoff.md` records `Status: Approved for implementation`, the approval date, Paper project and prototype references, approved frames, and known implementation notes.
+- Google Stitch contains the approved foundations, components, complete screen inventory, desktop and compact variants, prototype, reduced-motion path, accessibility annotations, and edge states defined by Plan 0.
+- `docs/design/stitch-handoff.md` records `Status: Approved for implementation`, the
+  approval date, Google Stitch project and screen references, approved screen groups,
+  and known implementation notes.
 - `docs/design/design-review-checklist.md` has no blocking finding.
 - The owner has explicitly approved Gate D5.
 
-`DESIGN.md` is the normative token authority. The approved Paper project is the normative composition and interaction authority. If either differs from a literal example in this plan, update this plan and its tests before implementing; do not silently follow the stale example.
+`DESIGN.md` is the normative token authority. The approved Google Stitch project is the normative composition and interaction authority. If either differs from a literal example in this plan, update this plan and its tests before implementing; do not silently follow the stale example.
 
 ## File structure locked by this plan
 
@@ -557,7 +559,7 @@ git commit -m "test(app): add accessible shell coverage"
 
 ## Task 3: Establish design tokens and typography
 
-**Design prerequisite:** Gate D5 must be approved. Reconcile every literal value in this task with root `DESIGN.md` and the approved Paper foundations before writing a test or stylesheet. The YAML front matter is authoritative when values differ.
+**Design prerequisite:** Gate D5 must be approved. Reconcile every literal value in this task with root `DESIGN.md` and the approved Google Stitch foundations before writing a test or stylesheet. The YAML front matter is authoritative when values differ.
 
 **Files:**
 - Create: `src/styles/tokens.css`
@@ -2105,7 +2107,7 @@ Read `content/README.md` before adding MDX. Production content must pass the sch
 ## Design authority
 
 Use root `DESIGN.md` for normative visual tokens and component rules, the approved
-Paper handoff in `docs/design/paper-handoff.md` for composition and interaction detail,
+Google Stitch handoff in `docs/design/stitch-handoff.md` for composition and interaction detail,
 and `docs/superpowers/specs/2026-07-19-systems-fieldbook-portfolio-design.md` for product
 requirements.
 ```
@@ -2158,8 +2160,9 @@ git commit -m "ci(portfolio): add foundation quality gates"
 
 This plan is complete only when:
 
-- Gate D5 in `docs/design/paper-handoff.md` was approved before Task 1 began.
-- Implemented tokens and compositions match `DESIGN.md` and the approved Paper frames.
+- Gate D5 in `docs/design/stitch-handoff.md` was approved before Task 1 began.
+- Implemented tokens and compositions match `DESIGN.md` and the approved Google
+  Stitch screens.
 - A clean checkout installs with `pnpm install --frozen-lockfile`.
 - All base routes build and return successful responses.
 - Invalid production MDX fails with a source-path error.

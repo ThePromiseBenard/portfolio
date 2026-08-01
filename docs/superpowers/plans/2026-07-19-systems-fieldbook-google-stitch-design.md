@@ -1,12 +1,13 @@
-# Systems Fieldbook Paper Design Production Plan
+# Systems Fieldbook Google Stitch Design Production Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to execute this plan task-by-task. Do not begin application implementation until the owner approves the Paper prototype at Gate D5.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to execute this plan task-by-task. Do not begin application implementation until the owner approves the annotated Google Stitch prototype screens at Gate D5.
 
-**Goal:** Produce and approve the complete responsive visual design for Systems Fieldbook in Paper, using the root `DESIGN.md` as the normative token and component authority, before any application code is written.
+**Goal:** Produce and approve the complete responsive visual design for Systems Fieldbook in Google Stitch, using the root `DESIGN.md` as the normative token and component authority, before any application code is written.
 
-**Architecture:** Paper is the visual design workspace; `DESIGN.md` is the machine-readable design-system source; the approved PRD is the product source; repository handoff documents preserve links, decisions, states, and implementation annotations. Design proceeds from foundations to low-fidelity structure, components, high-fidelity compositions, responsive variants, motion, accessibility, and owner approval. Each stage has an explicit gate so visual uncertainty is resolved before engineering begins.
+**Architecture:** Google Stitch is the visual design workspace; `DESIGN.md` is the machine-readable design-system source; the approved PRD is the product source; repository handoff documents preserve links, decisions, states, and implementation annotations. Design proceeds from foundations to low-fidelity structure, components, high-fidelity compositions, responsive variants, motion, accessibility, and owner approval. Each stage has an explicit gate so visual uncertainty is resolved before engineering begins.
 
-**Design tools:** Paper MCP, Google Stitch `DESIGN.md` schema and validator, repository Markdown documentation
+**Design tools:** Google Stitch MCP, the `DESIGN.md` schema and official validator,
+repository Markdown documentation
 
 ---
 
@@ -14,13 +15,24 @@
 
 This is Plan 0. It must be completed before the foundation implementation plan.
 
-Paper MCP is a required execution dependency. If Paper project, canvas/frame,
-component, prototype, comment, inspect, and export capabilities are not connected in
-the active session, pause this plan at Task 1. Do not substitute code, HTML mockups,
+Google Stitch MCP is a required execution dependency. The active session must have
+authenticated access to project, screen-generation, screen-editing, variant, and
+design-system operations before Task 1 can pass. If account-scoped Stitch operations
+are unavailable, pause this plan at Task 1. Do not substitute code, HTML mockups,
 another design tool, or untracked image generation.
 
-The tool names exposed by Paper MCP may change. Use the connected Paper operations
+The tool names exposed by Google Stitch MCP may change. Use the connected operations
 that correspond to the actions in this plan; do not invent unsupported method names.
+The currently verified catalog provides project listing and retrieval, screen listing
+and retrieval, text-to-screen generation, screen editing, variant generation, and
+design-system upload/create/update/list/apply operations.
+
+Google Stitch organises the work as projects and screens rather than page-and-artboard
+documents. Preserve the numbered design order with screen group names and screen
+labels. Where a gate requires interaction or review evidence beyond native Stitch
+wiring, create the evidence as generated Stitch screens with explicit trigger, state,
+focus, history, interruption, and reduced-motion annotations. This changes tool
+mechanics only; it does not change scope, task order, or approval requirements.
 
 ## Design authority and conflict order
 
@@ -30,14 +42,14 @@ Use these sources in order:
    generation rules.
 2. `docs/superpowers/specs/2026-07-19-systems-fieldbook-portfolio-design.md` — product,
    content, route, audience, and acceptance requirements.
-3. The approved Paper project — composition, responsive behaviour, component anatomy,
+3. The approved Google Stitch project — composition, responsive behaviour, component anatomy,
    and prototype detail.
 4. `https://jamesakpan.com/` — inspiration only; never a source for copied assets,
    identity, wording, or exact effects.
 
-When Paper exploration reveals a better recurring rule, update `DESIGN.md`, validate
-it, and record the decision before applying the change across frames. Do not allow a
-one-off Paper value to silently become the design system.
+When Google Stitch exploration reveals a better recurring rule, update `DESIGN.md`, validate
+it, and record the decision before applying the change across screens. Do not allow a
+one-off Google Stitch value to silently become the design system.
 
 ## Required repository handoff files
 
@@ -45,7 +57,7 @@ This plan creates these durable documents during execution:
 
 ```text
 docs/design/
-├── paper-handoff.md
+├── stitch-handoff.md
 ├── design-decisions.md
 ├── design-review-checklist.md
 └── references/
@@ -54,12 +66,13 @@ docs/design/
     └── prototype-flow.png
 ```
 
-Paper remains the editable source. The exported overview images support review and
-history; they are not substitutes for inspectable Paper frames.
+Google Stitch remains the editable source. Retrieved screen images support review and
+history; they are not substitutes for inspectable Google Stitch screen resources.
 
-## Paper project structure
+## Google Stitch project structure
 
-Create one Paper project named **Systems Fieldbook** with this page order:
+Create one Google Stitch project named **Systems Fieldbook** with this screen-group
+order:
 
 ```text
 00 Cover & brief
@@ -81,7 +94,7 @@ Use these baseline viewports:
 - Tablet: 768 × 1024
 - Mobile: 390 × 844
 
-Long-form frames may extend vertically. Keep their width fixed to the viewport under
+Long-form screens may extend vertically. Keep their width fixed to the viewport under
 review and annotate the intended sticky regions.
 
 ## Gate summary
@@ -93,17 +106,17 @@ review and annotate the intended sticky regions.
 | D2 | Low-fidelity information architecture and user flows are complete |
 | D3 | High-fidelity desktop and compact screens cover the release scope |
 | D4 | Prototype, motion, accessibility, and edge-state review pass |
-| D5 | Owner explicitly approves the Paper design for implementation |
+| D5 | Owner explicitly approves the Google Stitch design for implementation |
 
 No gate is implied by silence. Record approval and any conditions in
-`docs/design/paper-handoff.md`.
+`docs/design/stitch-handoff.md`.
 
-## Task 1: Validate the design authority and initialise Paper
+## Task 1: Validate the design authority and initialise Google Stitch
 
 **Files:**
 - Verify: `DESIGN.md`
 - Read: `docs/superpowers/specs/2026-07-19-systems-fieldbook-portfolio-design.md`
-- Create during execution: `docs/design/paper-handoff.md`
+- Create during execution: `docs/design/stitch-handoff.md`
 - Create during execution: `docs/design/design-decisions.md`
 
 - [ ] **Step 1: Validate the root design system**
@@ -117,20 +130,21 @@ npx @google/design.md lint DESIGN.md --format text
 Expected: zero errors and zero warnings. Informational token-summary output is
 acceptable.
 
-- [ ] **Step 2: Confirm Paper MCP readiness**
+- [ ] **Step 2: Confirm Google Stitch MCP readiness**
 
-List the available Paper capabilities and confirm that the session can create or open
-a project, create pages and frames, apply text and colour styles, define components and
-variants, connect prototype interactions, attach annotations or comments, inspect
-values, and export review images.
+List the available Google Stitch MCP tools and confirm authenticated account access.
+Verify project create/list/get, screen generate/list/get/edit, variant generation, and
+design-system upload/create/update/list/apply operations.
 
-Expected: every capability needed by this plan is available. If any is absent, stop
-and record the missing capability; do not begin a partial design in another tool.
+Expected: the MCP endpoint, credentials, and account-scoped operations work. Record
+any catalog limitation and its Stitch-native evidence convention in the decision log.
+If a required operation or authentication is absent, stop and record it; do not begin
+a partial design in another tool.
 
-- [ ] **Step 3: Create the project and page structure**
+- [ ] **Step 3: Create the project and screen-group structure**
 
-Create the **Systems Fieldbook** Paper project and the nine ordered pages listed above.
-On `00 Cover & brief`, include:
+Create the **Systems Fieldbook** Google Stitch project and the ten numbered screen
+groups listed above. In the `00 Cover & brief` screen, include:
 
 - Product statement and primary CTA
 - Three audiences
@@ -141,9 +155,9 @@ On `00 Cover & brief`, include:
   gate
 - Links or references to `DESIGN.md` and the approved PRD
 
-- [ ] **Step 4: Seed Paper with the design context**
+- [ ] **Step 4: Seed Google Stitch with the design context**
 
-Provide Paper this generation brief together with the complete `DESIGN.md` content:
+Provide Google Stitch this generation brief together with the complete `DESIGN.md` content:
 
 > Design Systems Fieldbook, a cinematic and writing-led portfolio for a systems
 > engineer working across web and distributed systems. Treat the supplied DESIGN.md
@@ -158,19 +172,20 @@ Provide Paper this generation brief together with the complete `DESIGN.md` conte
 
 - [ ] **Step 5: Start the handoff and decision logs**
 
-In `docs/design/paper-handoff.md`, record the Paper project title, stable project link
-or identifier, page inventory, current gate, date, and approval status. In
+In `docs/design/stitch-handoff.md`, record the Google Stitch project title, stable
+project resource name or link, screen-group inventory, current gate, date, and
+approval status. In
 `docs/design/design-decisions.md`, use entries with: decision, context, alternatives,
-rationale, affected frames, token impact, accessibility impact, and date.
+rationale, affected screens, token impact, accessibility impact, and date.
 
 - [ ] **Step 6: Pass Gate D0**
 
-Verify that the validator is clean, the Paper project is inspectable, and the cover
+Verify that the validator is clean, the Google Stitch project is inspectable, and the cover
 brief matches both source documents. Record `D0: passed` in the handoff.
 
 ## Task 2: Build and approve the visual foundations
 
-**Paper page:** `01 Foundations`
+**Google Stitch screen group:** `01 Foundations`
 
 - [ ] **Step 1: Create the colour board**
 
@@ -206,16 +221,17 @@ motion substitutions.
 
 - [ ] **Step 6: Audit foundations against `DESIGN.md`**
 
-Use Paper inspect values to compare every repeated value with the YAML front matter.
-Move exploration-only alternatives to `09 Archive`. Any accepted new system value must
-be added to `DESIGN.md`, linted, and logged before further use.
+Use Stitch design-system resources and retrieved screen details to compare every
+repeated value with the YAML front matter. Move exploration-only alternatives to the
+`09 Archive` screen group. Any accepted new system value must be added to `DESIGN.md`,
+linted, and logged before further use.
 
 Expected: no unexplained colours, type styles, radii, spacing values, or shadows remain
-on the active foundations page.
+in the active foundations screen group.
 
 ## Task 3: Design the component library and states
 
-**Paper page:** `02 Components`
+**Google Stitch screen group:** `02 Components`
 
 - [ ] **Step 1: Build navigation and action components**
 
@@ -256,7 +272,7 @@ and component library are approved as the common visual language.
 
 ## Task 4: Produce low-fidelity information architecture and flows
 
-**Paper page:** `03 Low-fidelity flows`
+**Google Stitch screen group:** `03 Low-fidelity flows`
 
 - [ ] **Step 1: Map the route and scene architecture**
 
@@ -307,7 +323,7 @@ low-fidelity structure.
 
 ## Task 5: Design the high-fidelity desktop experience
 
-**Paper pages:** `04 High-fidelity desktop`, `06 Articles & system reports`
+**Google Stitch screen groups:** `04 High-fidelity desktop`, `06 Articles & system reports`
 
 - [ ] **Step 1: Design the 1440px Home scene**
 
@@ -350,19 +366,19 @@ supporting imagery, and pull quotes while retaining the same product shell.
 
 - [ ] **Step 7: Validate compact-laptop pressure**
 
-Duplicate representative Home, Systems, Connect, report, and article frames at
+Generate representative Home, Systems, Connect, report, and article variants at
 1280×832. Resolve collisions and above-the-fold pressure without creating a separate
 visual system.
 
 ## Task 6: Design mobile and tablet recompositions
 
-**Paper page:** `05 High-fidelity compact`
+**Google Stitch screen group:** `05 High-fidelity compact`
 
 - [ ] **Step 1: Recompose all homepage scenes at 390×844**
 
 Use a dedicated mobile image crop, compact navigation, two- or three-line headings,
 near-full-viewport workspaces, stronger reading scrims, safe-area spacing, visible
-scroll cues, and tap-first interactions. Do not merely scale the desktop frames.
+scroll cues, and tap-first interactions. Do not merely scale the desktop screens.
 
 - [ ] **Step 2: Recompose deep routes at 390px**
 
@@ -384,7 +400,7 @@ flow. Resolve truncation, overlap, and hidden actions.
 
 ## Task 7: Build the interaction and motion prototype
 
-**Paper page:** `07 Prototype & motion`
+**Google Stitch screen group:** `07 Prototype & motion`
 
 - [ ] **Step 1: Connect primary navigation flows**
 
@@ -416,7 +432,7 @@ are identical.
 
 ## Task 8: Run accessibility, consistency, and edge-state review
 
-**Paper page:** `08 Accessibility & review`
+**Google Stitch screen group:** `08 Accessibility & review`
 
 - [ ] **Step 1: Create the accessibility annotation layer**
 
@@ -432,9 +448,10 @@ icons. Add or adjust scrims instead of relying on one favourable crop.
 
 - [ ] **Step 3: Review design-system consistency**
 
-Inspect active pages for colours, type styles, spacing, radii, shadows, icon strokes,
-and motion values. Move rejected exploration to `09 Archive`. Update `DESIGN.md` for
-approved recurring changes, lint it, and resynchronise the foundations page.
+Inspect active screens for colours, type styles, spacing, radii, shadows, icon
+strokes, and motion values. Move rejected exploration to the `09 Archive` screen
+group. Update `DESIGN.md` for approved recurring changes, lint it, and resynchronise
+the foundations screen group.
 
 - [ ] **Step 4: Review all release states**
 
@@ -444,8 +461,9 @@ content, missing image, and 200% zoom coverage where applicable.
 
 - [ ] **Step 5: Export review overviews**
 
-Export desktop, compact, and prototype overview boards to the three exact paths under
-`docs/design/references/`. Record exported frame names and Paper links in the handoff.
+Retrieve desktop, compact, and prototype overview screen images to the three exact
+paths under `docs/design/references/`. Record their Stitch screen resource names and
+links in the handoff.
 
 - [ ] **Step 6: Complete the design review checklist**
 
@@ -461,13 +479,13 @@ as explicit implementation notes, not as undefined visual work.
 ## Task 9: Obtain owner approval and lock the handoff
 
 **Files:**
-- Finalise: `docs/design/paper-handoff.md`
+- Finalise: `docs/design/stitch-handoff.md`
 - Finalise: `docs/design/design-decisions.md`
 - Finalise: `docs/design/design-review-checklist.md`
 - Modify if needed: `DESIGN.md`
 - Modify if needed: `docs/superpowers/plans/2026-07-19-systems-fieldbook-foundation.md`
 
-- [ ] **Step 1: Present the final Paper walkthrough**
+- [ ] **Step 1: Present the final Google Stitch walkthrough**
 
 Walk through the foundations, components, three audience flows, every route family,
 desktop and compact compositions, Connect, prototype, reduced-motion path, and edge
@@ -476,7 +494,7 @@ states. Present unresolved trade-offs explicitly.
 - [ ] **Step 2: Capture explicit owner feedback**
 
 Classify each item as blocking, approved follow-up, rejected, or accepted. Apply
-blocking changes in Paper, update any affected tokens and documents, and rerun the
+blocking changes in Google Stitch, update any affected tokens and documents, and rerun the
 relevant checks.
 
 - [ ] **Step 3: Revalidate the final `DESIGN.md`**
@@ -491,13 +509,13 @@ Expected: zero errors and zero warnings.
 
 - [ ] **Step 4: Record Gate D5**
 
-In `docs/design/paper-handoff.md`, record:
+In `docs/design/stitch-handoff.md`, record:
 
 - `Status: Approved for implementation`
 - Approval date
 - Owner approval statement
-- Paper project and prototype links or identifiers
-- Approved pages and frame names
+- Google Stitch project and annotated prototype-screen resource names or links
+- Approved screen groups and screen resource names
 - Known implementation notes
 - Explicitly deferred ideas
 - Final `DESIGN.md` commit
@@ -505,22 +523,22 @@ In `docs/design/paper-handoff.md`, record:
 - [ ] **Step 5: Reconcile the foundation plan**
 
 Confirm its token examples, screen assumptions, tests, and component boundaries match
-the approved Paper handoff. Edit the plan before coding if any accepted Paper decision
+the approved Google Stitch handoff. Edit the plan before coding if any accepted Google Stitch decision
 changed those details.
 
 - [ ] **Step 6: Commit the design handoff**
 
 ```bash
 git add DESIGN.md docs/design docs/superpowers/plans
-git commit -m "docs(design): approve paper handoff"
+git commit -m "docs(design): approve stitch handoff"
 ```
 
 ## Design-plan completion criteria
 
 This plan is complete only when:
 
-- `DESIGN.md` passes the official Google validator without errors or warnings.
-- The Paper project contains every ordered page and required frame.
+- `DESIGN.md` passes the official validator without errors or warnings.
+- The Google Stitch project contains every ordered screen group and required screen.
 - Foundations and component states use the normative tokens consistently.
 - Desktop, laptop, tablet, and mobile compositions cover the complete first-release
   route and scene inventory.
