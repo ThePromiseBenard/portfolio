@@ -119,7 +119,7 @@ No gate is implied by silence. Record approval and any conditions in
 - Create during execution: `docs/design/stitch-handoff.md`
 - Create during execution: `docs/design/design-decisions.md`
 
-- [ ] **Step 1: Validate the root design system**
+- [x] **Step 1: Validate the root design system**
 
 Run:
 
@@ -130,7 +130,7 @@ npx @google/design.md lint DESIGN.md --format text
 Expected: zero errors and zero warnings. Informational token-summary output is
 acceptable.
 
-- [ ] **Step 2: Confirm Google Stitch MCP readiness**
+- [x] **Step 2: Confirm Google Stitch MCP readiness**
 
 List the available Google Stitch MCP tools and confirm authenticated account access.
 Verify project create/list/get, screen generate/list/get/edit, variant generation, and
@@ -141,7 +141,7 @@ any catalog limitation and its Stitch-native evidence convention in the decision
 If a required operation or authentication is absent, stop and record it; do not begin
 a partial design in another tool.
 
-- [ ] **Step 3: Create the project and screen-group structure**
+- [x] **Step 3: Create the project and screen-group structure**
 
 Create the **Systems Fieldbook** Google Stitch project and the ten numbered screen
 groups listed above. In the `00 Cover & brief` screen, include:
@@ -155,7 +155,7 @@ groups listed above. In the `00 Cover & brief` screen, include:
   gate
 - Links or references to `DESIGN.md` and the approved PRD
 
-- [ ] **Step 4: Seed Google Stitch with the design context**
+- [x] **Step 4: Seed Google Stitch with the design context**
 
 Provide Google Stitch this generation brief together with the complete `DESIGN.md` content:
 
@@ -170,7 +170,7 @@ Provide Google Stitch this generation brief together with the complete `DESIGN.m
 > template. Design desktop and compact compositions as related art direction rather
 > than scaled copies.
 
-- [ ] **Step 5: Start the handoff and decision logs**
+- [x] **Step 5: Start the handoff and decision logs**
 
 In `docs/design/stitch-handoff.md`, record the Google Stitch project title, stable
 project resource name or link, screen-group inventory, current gate, date, and
@@ -178,7 +178,7 @@ approval status. In
 `docs/design/design-decisions.md`, use entries with: decision, context, alternatives,
 rationale, affected screens, token impact, accessibility impact, and date.
 
-- [ ] **Step 6: Pass Gate D0**
+- [x] **Step 6: Pass Gate D0**
 
 Verify that the validator is clean, the Google Stitch project is inspectable, and the cover
 brief matches both source documents. Record `D0: passed` in the handoff.
@@ -187,39 +187,39 @@ brief matches both source documents. Record `D0: passed` in the handoff.
 
 **Google Stitch screen group:** `01 Foundations`
 
-- [ ] **Step 1: Create the colour board**
+- [x] **Step 1: Create the colour board**
 
 Show every YAML colour token as a named swatch with hex value, intended usage, and at
 least one valid text/background pairing. Add separate examples for the default 1px
 keyline, strong keyline, photography scrim, Primary focus ring, and semantic states.
 Clearly label Primary as Signal and Secondary as Incident.
 
-- [ ] **Step 2: Create the typography specimen**
+- [x] **Step 2: Create the typography specimen**
 
 Show all twelve typography tokens with family, weight, size, line height, tracking,
 role, and realistic Systems Fieldbook copy. Include desktop and compact display
 scaling, article measure, mono readouts, code, and a 200% zoom reading example.
 
-- [ ] **Step 3: Create spacing, grid, and containment boards**
+- [x] **Step 3: Create spacing, grid, and containment boards**
 
 Visualise the complete spacing scale, 12-column desktop grid, 4-column compact grid,
 outer margins, gutters, 720px article measure, 960px diagram width, 1200px content
 width, and 1440px page maximum. Show the 900px composition breakpoint as a structural
 change, not a shrink operation.
 
-- [ ] **Step 4: Create shape, stroke, and depth boards**
+- [x] **Step 4: Create shape, stroke, and depth boards**
 
 Show every radius token, 1px and 2px strokes, stage/workspace/raised/overlay depth
 levels, blur fallback, grain, vignette, and image treatment. Include a reduced-
 transparency example with an opaque workspace.
 
-- [ ] **Step 5: Create iconography, diagram, and motion boards**
+- [x] **Step 5: Create iconography, diagram, and motion boards**
 
 Define the 24px outline icon grid, 1.5–2px strokes, diagram nodes and connectors,
 normal-flow and incident-flow examples, motion durations, easing curves, and reduced-
 motion substitutions.
 
-- [ ] **Step 6: Audit foundations against `DESIGN.md`**
+- [x] **Step 6: Audit foundations against `DESIGN.md`**
 
 Use Stitch design-system resources and retrieved screen details to compare every
 repeated value with the YAML front matter. Move exploration-only alternatives to the
@@ -233,38 +233,38 @@ in the active foundations screen group.
 
 **Google Stitch screen group:** `02 Components`
 
-- [ ] **Step 1: Build navigation and action components**
+- [x] **Step 1: Build navigation and action components**
 
 Create reusable components for the product mark, desktop navigation capsule, compact
 navigation, active indicator, text link, Primary button, Secondary button, quiet
 button, icon button, and back action.
 
-- [ ] **Step 2: Build portfolio content components**
+- [x] **Step 2: Build portfolio content components**
 
 Create system card, experience entry, Engineering Note row, Life Note row, collection
 header, metadata readout, technology label, semantic badge, metric, callout, image
 field note, scroll affordance, diagram node, diagram connector, and reading header.
 
-- [ ] **Step 3: Build form and overlay components**
+- [x] **Step 3: Build form and overlay components**
 
 Create labelled input, textarea, checkbox, radio, tooltip, dialog shell, Connect scene,
 email action, calendar action, social action, and résumé action. The release does not
 need a contact-form backend, but the system must define accessible inputs for future
 editorial or filtering use.
 
-- [ ] **Step 4: Build technical reading components**
+- [x] **Step 4: Build technical reading components**
 
 Create code block, inline code, table, figure, caption, topology diagram, sequence
 diagram, decision callout, failure-mode callout, and related-content card.
 
-- [ ] **Step 5: Complete the state matrix**
+- [x] **Step 5: Complete the state matrix**
 
 For each interactive component, show applicable default, hover, focus-visible, active,
 selected, disabled, loading, success, warning, and error states. Add touch annotations
 where hover is not available. Confirm 44×44px minimum targets and 48px standard button
 height.
 
-- [ ] **Step 6: Pass Gate D1**
+- [x] **Step 6: Pass Gate D1**
 
 Review component consistency, contrast, naming, state coverage, and token usage. Record
 exceptions as decisions or remove them. Record `D1: passed` only after the foundations
@@ -274,13 +274,13 @@ and component library are approved as the common visual language.
 
 **Google Stitch screen group:** `03 Low-fidelity flows`
 
-- [ ] **Step 1: Map the route and scene architecture**
+- [x] **Step 1: Map the route and scene architecture**
 
 Create a sitemap for Home, Systems, Experience, Engineering Notes, Life Notes, About,
 Connect, system reports, collection indexes, and article details. Distinguish homepage
 hash scenes from crawlable routes.
 
-- [ ] **Step 2: Wireframe the homepage scene sequence**
+- [x] **Step 2: Wireframe the homepage scene sequence**
 
 At desktop and mobile widths, wireframe:
 
@@ -295,19 +295,19 @@ At desktop and mobile widths, wireframe:
 Show stage, navigation, workspace boundaries, independent-scroll affordance, primary
 CTA, focus destination, and originating scene for Connect.
 
-- [ ] **Step 3: Wireframe deep-reading flows**
+- [x] **Step 3: Wireframe deep-reading flows**
 
 Create low-fidelity index and detail flows for a system report, Engineering Notes, and
 Life Notes. Include filters, table of contents, article header, related content,
 diagrams, code, mobile fallbacks, and collection return paths.
 
-- [ ] **Step 4: Wireframe state and failure flows**
+- [x] **Step 4: Wireframe state and failure flows**
 
 Include empty collection, draft-excluded collection, missing optional image, invalid
 hash fallback, 404, unavailable booking, long title, long navigation label, and diagram
 text-alternative states.
 
-- [ ] **Step 5: Validate the three audience journeys**
+- [x] **Step 5: Validate the three audience journeys**
 
 Trace and annotate:
 
@@ -315,11 +315,20 @@ Trace and annotate:
 - Potential client: Home → outcome-led system card → report → Start a conversation
 - Technical peer: Home → Engineering Notes → article → related system
 
-- [ ] **Step 6: Pass Gate D2**
+- [x] **Step 6: Pass Gate D2**
 
 Confirm that every required route and scene has a clear entry, next action, back path,
 focus path, and compact composition. Record `D2: passed` after owner approval of the
 low-fidelity structure.
+
+Gate D2 passed on 2 August 2026 after the owner explicitly responded `Approved D2.`
+The requested pre-Task-5 cleanup removed 52 rejected, superseded, exploratory, or
+obsolete boards from the active Stitch canvas. The final inventory contains 68 active
+screens and no remaining ID from the cleanup manifest. Four accepted boards affected
+during coordinate-based cleanup were recovered from retrievable originals; the active
+replacement IDs and recovery provenance are recorded in
+`docs/design/stitch-handoff.md`. Task 5 design is unblocked. Application implementation
+remains blocked until Gate D5.
 
 ## Task 5: Design the high-fidelity desktop experience
 
