@@ -1,7 +1,7 @@
 # Systems Fieldbook Google Stitch Handoff
 
-- **Status:** Plan 0 Tasks 1–4 complete; Task 5 high-fidelity design is unblocked
-- **Current gate:** D2 passed; D3 is next
+- **Status:** Plan 0 Tasks 1–5 complete; Task 6 mobile/tablet design is unblocked
+- **Current gate:** D3 passed; D4 is next
 - **Reset date:** 1 August 2026
 - **Implementation approval:** Not granted; Gate D5 remains pending
 - **Design workspace:** Google Stitch MCP
@@ -53,10 +53,33 @@ The **Systems Fieldbook** Stitch project will use these ordered screen groups:
 7. `06 Articles & system reports`
 8. `07 Prototype & motion`
 9. `08 Accessibility & review`
-10. `09 Archive`
+10. `09 Review evidence` — temporary during an active gate; delete after the evidence
+    is preserved in the repository
 
 This naming preserves the approved design-production order while using Stitch's
 project-and-screen model.
+
+## Active-board cleanliness policy
+
+The active Stitch board is not a historical archive. It must contain only screens that
+are intended to inform what will be built, plus temporary review evidence for the task
+currently awaiting approval.
+
+Cleanup is part of the definition of done for every design task:
+
+- create a keep manifest of the authoritative screen IDs;
+- record rejected and superseded IDs with their reasons in repository documentation;
+- delete rejected, superseded, duplicate, failed-generation, stale-preview, and
+  obsolete registry screens from Stitch;
+- delete temporary review or archive boards after their evidence is preserved here;
+- retrieve the remaining project inventory and verify an exact ID match with the keep
+  manifest; and
+- do not pass the task's gate while any unexplained screen remains.
+
+If screen deletion is unavailable through MCP, use the authenticated Stitch UI. The
+repository retains the audit trail; obsolete screens must not remain on the board for
+traceability. Historical sections below that describe persistent `09 Archive` boards
+record the earlier workflow and are superseded by this policy as of 3 August 2026.
 
 ## Stitch MCP readiness
 
@@ -235,6 +258,163 @@ The replacement IDs are the active-canvas authority for these four boards. The o
 IDs are retained here only as recovery provenance; all other accepted IDs remain
 unchanged.
 
+## Task 5 high-fidelity review record
+
+Task 5 Steps 1–7 are produced and visually audited in the private **Systems
+Fieldbook** Stitch project. Review evidence was originally collected in
+`projects/15622483747994955838/screens/b3d25437fb5640cf83cdbc4e635906be`
+as `06Z Task 5 — Gate D3 review registry`. Its evidence is preserved below, and the
+temporary registry has been removed from the active canvas.
+
+The review candidates are grouped as follows:
+
+- Home: final 1440×1024 candidates `09bf25335e8a4eccaa93acec6278fada` and
+  `3ac5df8b9c3d4ed59514bbb005386a3b` (`y=191804`).
+- Homepage scenes: final 1440×1024 Systems and Experience candidates
+  `edda4a808590402c865243c9303d5269` and
+  `852173fa8cfd494188c533441c6219df`, followed by
+  `2bd2ae62ae74456b818b20cabdb3b67f`,
+  `662c140f042c4fe7b06e591916f5dbb9`, and
+  `1239ea2e3ba3494eb187a76b71aa8de4` (`y=193247` and `y=194527`).
+- Connect: `ede3b71f699a499cb500c102c3dd3294`, final unavailable-booking
+  replacement `f207607dd710453099524af8fb3e6170`, and
+  `eaff0de606e74accb8501c820c69d869` (`y=195807` and `y=209656`).
+- Collection indexes: `3efc8ac5a3b843d08d6ef3c1a6617139`, final Engineering Notes
+  candidate `8b8d42955999434da66ac865aa8ce1ac`, and final Life Notes candidate
+  `2e059a20804542799d9729e619264bcb` (`y=197087` and `y=211653`).
+- System report sequence: `22ce800dce934709a3f8818ab00667ba` →
+  `f26f298c757f4f73a9f7d246fbe83a79` →
+  `cdd6abbb52de4a31a38d93d989f2ab74`. The middle segment continues
+  vertically at `y=202064` between the opening and closing segments at `y=198683`.
+- Long-form articles: Engineering Note `ee47d1c4600044bf9d4ba391bc750265`
+  (`y=205320`) and final Life Note `2a70881e1c0741269ef6b1b6636c6dc6`
+  (`y=218259`).
+- Compact pressure row: `d3ec93790d8442b49a0dc7463c7b3f86`,
+  `3dba0e93a76c4948bd53094c6ec4fe27`, `8a8b4ff5d5fa44739ba7cfc6c50055d6`,
+  `9e554498d47b44068b56b2f583b442f9`, and
+  `45c03c74e5f24611b265f7f4cb04e2ef` (`y=208376`).
+
+Visual review rejected generated people, stock imagery, actual-looking contact data,
+invented portfolio facts, article titles, dates, metrics, and technical claims.
+Replacement candidates use owner-supplied bracketed placeholders and neutral media
+panels. Related generation batches share canvas rows; the recorded coordinates identify
+the few continuation screens that sit on a later row.
+
+### Task 5 cleanup completed — 4 August 2026
+
+The authenticated Stitch UI removed 30 non-authoritative Task 5 instances after their
+IDs and reasons were preserved here. Stitch represents a UI removal as `hidden: true`,
+so the resources remain recoverable without appearing on the active canvas.
+
+- Rejected or superseded Home drafts after photography, fallback, and factual-safety
+  correction: `2cb232ead41d4f8d9b33eaf9564478a1`,
+  `cc33b41a816e4cf0973ec55118302de8`, and
+  `a3517f32613c4103a04f24638d6d9088`.
+- Superseded or duplicate homepage-scene drafts replaced by the corrected scene row:
+  `2a56911dac7b4ab2900a66493f6a9628`,
+  `af7791af5e7144618b7a37ae99393f00`,
+  `121313131a404894899153bb47a6d175`,
+  `6b906a1a0fdc4a1b988a95516d78302a`,
+  `68b9dd8cc91440c39e7863150027fa2b`,
+  `1e0ad90b591d4434afe311610fc7cb13`,
+  `76b69521a473494081df714735aac233`, and
+  `b981f3edb024472e9686c3d0bc580327`.
+- Stale Connect and collection-index drafts superseded by the final replacements:
+  `aa5752aa2f14471ead5ff507510dd3d6`,
+  `3cb686e1355b48298910e562b25c460e`, and
+  `cda40540edc544ae9b37ac042ec36580`.
+- Article drafts superseded by the factual-safety and pull-quote corrections:
+  `e8ed0367e0c7426a8b776bacd5548e7c` and
+  `3bc0ec0d4a2548248815d09ff30942ba`.
+- Compact-laptop generations superseded by the five corrected pressure candidates:
+  `9d55ec3a29c24d2793c94e56e20832f7`,
+  `75e610f2601246478f9ec998e4cc3667`,
+  `b979524aa0a7415aa999b7477307ab9b`,
+  `465857c04a1944a9b51681e19deb249d`,
+  `6657224dbce44f9b98fc9125ccc094c2`,
+  `c71a7d89009540148153033b95ad63df`,
+  `71a5e7918e0042a8b802c66562bfbfb2`,
+  `c14bd867139b43509a57d09474cb4bce`,
+  `6273a1b3da2c4fd2934bdb189e78f018`, and
+  `18b60c2bd0c74d20a3647df7449933b9`.
+- Intermediate replacement drafts superseded by the final Connect and index
+  candidates: `db8b0fd431d84f18a5a71e19fb9462dc`,
+  `a2e66d438d004ed2a0e67b4c888d602c`, and
+  `b7d2f5b1f3954f7c85199df83bc02afd`.
+- Temporary Gate D3 registry removed after this evidence was recorded:
+  `b3d25437fb5640cf83cdbc4e635906be`.
+
+Fresh `get_project` verification reported 178 total instances: 92 visible and 86
+hidden. Exactly 23 visible Task 5 instances remain at `y >= 191804`; all 30 cleanup
+IDs report `hidden: true`, and every ID in the 23-screen keep manifest above reports
+`hidden: false`. The cleanup comparison has zero failures and zero unexplained Task 5
+screens.
+
+Stitch continued to export the compact candidates in a 1280×1024 desktop frame after
+an explicit 1280×832 resize command. Their compositions were reflowed and reviewed
+for the 832px above-the-fold pressure target, but exact 1280×832 export metadata could
+not be produced by the connected Stitch operation. This limitation was recorded on
+the removed registry and must be considered during D3 review.
+
+### Gate D3 correction audit — 9 August 2026
+
+The pre-approval audit found two implementation-authority defects in the original
+23-screen manifest: four desktop candidates did not expose an exact 1440×1024 export,
+and the Life Note export contained repeated pull-quote/body filler despite an earlier
+canvas-layer edit. The defects were corrected with source-preserving Stitch variants.
+
+The five replacement authorities are:
+
+- Home with owner-supplied-photo treatment:
+  `09bf25335e8a4eccaa93acec6278fada`.
+- Home deterministic fallback: `3ac5df8b9c3d4ed59514bbb005386a3b`.
+- Systems gallery: `edda4a808590402c865243c9303d5269`.
+- Experience timeline: `852173fa8cfd494188c533441c6219df`.
+- Life Note detail: `2a70881e1c0741269ef6b1b6636c6dc6`.
+
+All four desktop exports are 2880×2048 screenshots backed by fixed 1440×1024
+`html` and `body` elements. Independent comparison found sizing-only source diffs and
+no content, shell, state, or factual-safety drift. The Life Note export has one
+navigation shell, a semantic reading header with bracketed title, summary, date,
+reading-time, and theme placeholders, exactly one `[Pull quote]`, exactly two
+supporting-media placeholders, global 2px Signal focus rings with 2px offsets, and
+canonical visible colours only. It contains no image, footer, metric, or invented
+claim. Independent audits passed all five replacement screens.
+
+The correction delete manifest records these recoverably hidden resources and reasons:
+
+- Original viewport-ambiguous desktop candidates, superseded by exact 1440×1024
+  exports: `5a5047aaa52b4104b1deca0f3a6ec126`,
+  `ad3fb7ec536e407a95caa901da18ead9`,
+  `4afb656b33f14790b317d2a8cf159d95`, and
+  `b381a076bad84faf903384382058bf2b`.
+- Original Life Note with repeated pull-quote/body content:
+  `a3fc74ee87df4e2ca98066291b83b1a3`.
+- Rejected Life Note refinements: `5d33c0b18a194b6f8651233756b5259a`
+  (incorrect shared shell), `41509215a362405cb8a100bd278362d5`
+  (incorrect route set), `05ee237e43b843998df13d85b83ec184`
+  (incorrect shell and noncanonical presentation),
+  `1055d7e97a6a4baeadb2aaffcffecd25` (duplicated navigation shell), and
+  `c30ba205a3b9458c87a13f31ae9a3d96` (missing reading metadata, incomplete focus
+  coverage, and noncanonical visible aliases).
+- Recovery-only text instance `70707624-0e7a-4cb4-b8d5-7a9038dc22fd`, created by
+  window-restoration keystrokes while the authenticated Arc window was minimized; it
+  was never design or implementation authority.
+
+Final `get_project` reconciliation reports 189 total instances: 92 visible and 97
+hidden. The corrected 23-screen keep manifest is the grouped candidate list above with
+the five replacement IDs substituted for their five superseded sources. All 23 keep
+IDs report `hidden: false`; all 30 historical cleanup IDs, all 10 correction-screen
+delete IDs, and the recovery-only text instance report `hidden: true`. Exactly 23
+visible Task 5 screens remain at `y >= 191804`, with zero missing or unexplained IDs.
+The only visible instance without a source screen is the approved design-system
+instance. The board is clean, and the owner approved Gate D3 on 9 August 2026.
+
+The owner explicitly responded `Approve D3` on 9 August 2026. Task 5 and Gate D3 are
+therefore complete, and Task 6 mobile/tablet recomposition may begin. This approval is
+for continued design production only; application implementation remains blocked until
+Gate D5.
+
 ## Task 1 screen record
 
 The authoritative `00 Cover & brief` screen is
@@ -302,8 +482,23 @@ Evidence:
 - Four accepted boards affected during cleanup were recovered from retrievable
   originals, and their replacement titles, device types, and dimensions match.
 
-### D3–D5 — pending
+### D3 — passed on 9 August 2026
 
-Later gates retain their original scope and order. D2 permits Task 5 design production;
-it does not grant application implementation approval. Gate D5 remains the
+Evidence:
+
+- The owner explicitly responded `Approve D3` after the corrected board and final
+  keep/delete reconciliation were presented.
+- All 23 authoritative Task 5 candidates are visible, with zero missing or unexplained
+  Task 5 instances.
+- Four corrected desktop candidates have exact 1440×1024 HTML/body viewport evidence
+  and sizing-only source diffs.
+- The corrected Life Note passed independent specification and accessibility audits.
+- All historical, superseded, rejected, and recovery-only cleanup targets report
+  `hidden: true`.
+- `DESIGN.md` lint completed with zero errors and zero warnings.
+
+### D4–D5 — pending
+
+Later gates retain their original scope and order. D3 permits Task 6 responsive design
+production; it does not grant application implementation approval. Gate D5 remains the
 implementation boundary.

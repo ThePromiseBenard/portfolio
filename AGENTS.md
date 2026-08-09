@@ -14,6 +14,12 @@ for shared UI, `src/features/` for content and metadata logic, `src/styles/` for
 tokens, `content/` for typed MDX, and `tests/e2e/` for browser coverage. Do not begin
 application implementation until the Google Stitch handoff records Gate D5 approval.
 
+Keep the active Google Stitch board limited to implementation authority. Temporary
+explorations may exist only while their design task is active. At task completion and
+before every design gate, record rejected or superseded screen IDs and reasons in the
+repository handoff, delete those screens from Stitch, delete obsolete review/archive
+boards, and verify the remaining screen inventory against an explicit keep manifest.
+
 ## Build, Test, and Development Commands
 
 Currently available:

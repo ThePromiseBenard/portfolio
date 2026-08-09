@@ -1,8 +1,10 @@
 # Systems Fieldbook Design Decisions
 
 This log records accepted decisions that affect Google Stitch screen patterns, design
-tokens, accessibility, or implementation handoff. Rejected exploration belongs in the
-Stitch `09 Archive` screen group.
+tokens, accessibility, or implementation handoff. Rejected exploration is recorded by
+ID and reason in repository documentation, then deleted from the active Stitch board.
+Historical `09 Archive` decisions below are superseded by the 3 August 2026
+active-board cleanup decision.
 
 ## 2026-08-01 — Use Google Stitch MCP as the design workspace
 
@@ -295,3 +297,108 @@ Stitch `09 Archive` screen group.
   `projects/15622483747994955838/screens/1ecfc38a77294c42aa7eb5bc6fcb59b7`,
   final `list_screens` inventory, and the recovery mappings above.
 - **Approval:** Explicit owner approval and cleanup direction on 2 August 2026.
+
+## 2026-08-02 — Use a Task 5 registry as the high-fidelity review authority
+
+- **Decision:** Keep related high-fidelity generation batches on shared canvas rows
+  and publish `06Z Task 5 — Gate D3 review registry` as the authoritative map from
+  functional group to final review-candidate screen ID and canvas coordinate.
+- **Context:** Stitch generations produced useful compositions alongside superseded
+  variants, and its MCP surface does not provide a reliable screen move, hide, or
+  delete operation. Several generated screens also required factual-safety
+  replacements after introducing sample content or imagery.
+- **Alternatives:** Treat nearby titles as sufficient authority; delete or drag every
+  superseded screen through the coordinate-based UI; allow generated sample content
+  to stand as harmless filler.
+- **Rationale:** An ID-level registry makes the review set deterministic, preserves
+  traceability, and prevents invented copy, generated photography, or stale previews
+  from becoming implementation authority.
+- **Affected screens:** The Task 5 candidate IDs listed in
+  `docs/design/stitch-handoff.md`. The temporary registry was removed from the active
+  canvas after its evidence was copied into that handoff.
+- **Compact limitation:** Stitch retained a 1280×1024 export frame after explicit
+  1280×832 resize requests. The compact candidates were reflowed and reviewed for the
+  832px above-the-fold target, and the registry exposes the metadata limitation.
+- **Token impact:** None. All candidates use the existing Systems Fieldbook design
+  system; no recurring visual value was added.
+- **Accessibility impact:** Positive. The final candidates preserve visible focus,
+  44px controls, diagram text alternatives, and owner-supplied content placeholders.
+- **Evidence:** Historical Gate D3 registry
+  `projects/15622483747994955838/screens/b3d25437fb5640cf83cdbc4e635906be`
+  and the durable screen/position inventory in `docs/design/stitch-handoff.md`.
+- **Approval:** Production decision only. Superseded by the explicit Gate D3 approval
+  recorded on 9 August 2026.
+
+## 2026-08-03 — Delete non-build screens after every design task
+
+- **Decision:** Treat cleanup as part of design completion. At the end of each task
+  and before its gate, preserve rejected or superseded IDs and reasons in repository
+  documentation, delete the corresponding Stitch screens, delete obsolete archive or
+  review boards, and verify the remaining inventory against an explicit keep manifest.
+- **Context:** The owner requires the board to be left with only the screens that will
+  inform what is actually built. Persistent explorations and review registries make
+  the active authority harder to inspect and increase the risk of implementing stale
+  or fabricated content.
+- **Alternatives:** Keep a permanent `09 Archive` group; retain all generations for
+  visual history; rely on titles or a registry to distinguish final screens.
+- **Rationale:** Git-tracked documentation provides durable history without allowing
+  obsolete screens to compete with approved implementation authority.
+- **Operational rule:** Temporary explorations may exist only while a task is active.
+  A gate cannot pass until the keep-manifest comparison reports zero unexplained
+  screens. If MCP cannot delete screens, cleanup must use the authenticated Stitch UI;
+  inability to delete safely blocks the gate.
+- **Task 5 impact:** Completed on 4 August 2026. Thirty rejected, superseded, or
+  temporary instances were removed through the Stitch UI, including the Gate D3
+  registry. Fresh project retrieval confirmed all 30 as hidden, all 23 keep-manifest
+  IDs as visible, and exactly 23 visible Task 5 screens.
+- **Token impact:** None.
+- **Accessibility impact:** Positive. Reviewers and implementers are less likely to
+  select stale screens with incomplete focus, contrast, or content-safety treatment.
+- **Evidence:** Active-board cleanliness policy, complete Task 5 delete manifest, and
+  verified post-cleanup counts in `docs/design/stitch-handoff.md`, plus the execution
+  rule in the Google Stitch production plan.
+- **Approval:** Explicit owner direction on 3 August 2026.
+
+## 2026-08-09 — Replace ambiguous Gate D3 exports instead of relying on canvas edits
+
+- **Decision:** Replace the four viewport-ambiguous desktop candidates and the
+  canvas-edited Life Note with durable, independently audited Stitch variants. Treat
+  canvas-layer edits as non-authoritative unless the retrieved export reflects them.
+- **Context:** The Gate D3 audit found that four accepted desktop resources exported
+  at 1280×1024 despite the required 1440×1024 composition. It also found that the
+  Life Note's retrieved HTML still contained repeated content after a successful
+  canvas edit event.
+- **Rationale:** Implementation must be grounded in retrievable exports, not transient
+  canvas state or handoff assertions. Source-preserving variants produced exact
+  viewport evidence and a durable article contract without changing approved content.
+- **Affected screens:** The five replacement and ten superseded/rejected screen IDs,
+  plus one recovery-only text instance, recorded in the 9 August 2026 correction audit
+  in `docs/design/stitch-handoff.md`.
+- **Token impact:** None. The canonical Systems Fieldbook palette and existing design
+  system remain unchanged.
+- **Accessibility impact:** Positive. The final Life Note applies the required focus
+  ring to every interactive element and retains 44px targets plus a 48px CTA.
+- **Evidence:** Retrieved HTML and screenshots, source-normalized desktop diffs,
+  independent audits of all five replacement candidates, and final keep/delete
+  reconciliation with zero unexplained Task 5 instances.
+- **Approval:** Production correction accepted by the explicit Gate D3 approval on
+  9 August 2026.
+
+## 2026-08-09 — Pass Gate D3 and begin responsive design production
+
+- **Decision:** Record Gate D3 as passed and begin Task 6 mobile/tablet recomposition.
+- **Context:** The owner explicitly responded `Approve D3` after the final 23-screen
+  high-fidelity manifest, correction audit, independent reviews, and clean-board
+  reconciliation were presented.
+- **Rationale:** The desktop authority is durable, factually safe, independently
+  audited, and free of unexplained Task 5 instances. Responsive design can now proceed
+  without inheriting the rejected viewport or Life Note exports.
+- **Affected screens:** The corrected 23-screen Task 5 keep manifest in
+  `docs/design/stitch-handoff.md` and all Task 6 responsive compositions derived from
+  it.
+- **Token impact:** None.
+- **Accessibility impact:** Positive. Task 6 inherits the audited focus, target-size,
+  content-safety, and canonical-colour requirements.
+- **Evidence:** Gate D3 correction audit, live keep/delete reconciliation, independent
+  audits, and the owner's explicit approval on 9 August 2026.
+- **Approval:** Explicit owner approval on 9 August 2026.

@@ -34,6 +34,33 @@ wiring, create the evidence as generated Stitch screens with explicit trigger, s
 focus, history, interruption, and reduced-motion annotations. This changes tool
 mechanics only; it does not change scope, task order, or approval requirements.
 
+## Active-board hygiene rule
+
+The active Stitch board must contain only screens that are intended to become part of
+the implementation authority, plus temporary evidence required for the design task
+currently under review. Exploration is allowed while a task is active, but cleanup is
+part of completing that task and is required before its gate can pass.
+
+At the end of every design task and before every gate:
+
+1. Create an explicit keep manifest containing every screen that remains build or
+   design-system authority.
+2. Record rejected, superseded, duplicate, failed-generation, and obsolete screen IDs
+   with concise reasons in `docs/design/stitch-handoff.md` or
+   `docs/design/design-decisions.md`.
+3. Delete those non-authoritative screens from the Stitch project. Repository records,
+   not retained canvas clutter, provide historical traceability.
+4. Delete temporary archive and review-registry screens after their evidence has been
+   copied into the repository, unless the registry itself is an approved implementation
+   artifact.
+5. Retrieve the final project inventory and compare it with the keep manifest. The
+   counts and IDs must match, with zero unexplained screens, before recording the gate.
+
+If the connected MCP does not expose screen deletion, use the authenticated Stitch UI.
+An unavailable delete operation is not permission to leave obsolete screens on the
+active board. Stop the gate and record the cleanup blocker if deletion cannot be
+completed safely.
+
 ## Design authority and conflict order
 
 Use these sources in order:
@@ -84,7 +111,7 @@ order:
 06 Articles & system reports
 07 Prototype & motion
 08 Accessibility & review
-09 Archive
+09 Review evidence (temporary; delete after the gate)
 ```
 
 Use these baseline viewports:
@@ -222,9 +249,9 @@ motion substitutions.
 - [x] **Step 6: Audit foundations against `DESIGN.md`**
 
 Use Stitch design-system resources and retrieved screen details to compare every
-repeated value with the YAML front matter. Move exploration-only alternatives to the
-`09 Archive` screen group. Any accepted new system value must be added to `DESIGN.md`,
-linted, and logged before further use.
+repeated value with the YAML front matter. Record exploration-only alternatives in the
+repository decision log, then delete their Stitch screens. Any accepted new system
+value must be added to `DESIGN.md`, linted, and logged before further use.
 
 Expected: no unexplained colours, type styles, radii, spacing values, or shadows remain
 in the active foundations screen group.
@@ -334,50 +361,70 @@ remains blocked until Gate D5.
 
 **Google Stitch screen groups:** `04 High-fidelity desktop`, `06 Articles & system reports`
 
-- [ ] **Step 1: Design the 1440px Home scene**
+- [x] **Step 1: Design the 1440px Home scene**
 
 Use an original-photography placeholder with explicit crop-safe zones, oversized
 name, positioning statement, availability context, navigation capsule, Primary
 Connect action, and restrained personal field-note detail. Also create the no-image
 fallback using a neutral gradient.
 
-- [ ] **Step 2: Design all dense homepage scenes**
+- [x] **Step 2: Design all dense homepage scenes**
 
 Create Systems, Experience, Engineering Notes preview, Life Notes preview, and About
 at 1440×1024. Preserve the stage while varying workspace density, title balance,
 context readout, diagram accent, and supporting imagery. Show visible independent-
 scroll affordance where required.
 
-- [ ] **Step 3: Design the Connect scene**
+- [x] **Step 3: Design the Connect scene**
 
 Show entry from another scene, email as the dependable first action, optional calendar,
 GitHub, LinkedIn, résumé, close/back behaviour, keyboard focus order, and unavailable-
 booking fallback. Keep theatrical depth restrained and readable.
 
-- [ ] **Step 4: Design collection indexes**
+- [x] **Step 4: Design collection indexes**
 
 Create desktop indexes for Systems, Engineering Notes, and Life Notes. Engineering
 Notes includes lightweight topic filtering; Life Notes uses themes and a calmer
 editorial density. Do not add first-release full-text search.
 
-- [ ] **Step 5: Design a complete system field report**
+- [x] **Step 5: Design a complete system field report**
 
 Include snapshot, problem context, system boundary, topology, critical flow, decisions,
 reliability and operations, outcome, retrospective, confidentiality notation, and
 related notes. Show long content, code, table, metric, callout, and accessible diagram
 patterns in realistic sequence.
 
-- [ ] **Step 6: Design Engineering and Life article details**
+- [x] **Step 6: Design Engineering and Life article details**
 
 Create one long-form example for each collection. Engineering uses a table of contents,
 technical figures, code, and operational callouts. Life uses more open spacing,
 supporting imagery, and pull quotes while retaining the same product shell.
 
-- [ ] **Step 7: Validate compact-laptop pressure**
+- [x] **Step 7: Validate compact-laptop pressure**
 
 Generate representative Home, Systems, Connect, report, and article variants at
 1280×832. Resolve collisions and above-the-fold pressure without creating a separate
 visual system.
+
+Task 5 production completed on 2 August 2026, and its active-board cleanup completed
+on 4 August 2026. The temporary review registry and 29 other rejected, superseded, or
+intermediate instances were removed after their evidence was copied into
+`docs/design/stitch-handoff.md`. Fresh inventory verification found exactly 23 visible
+Task 5 candidates and no keep/delete manifest failures. Stitch retained 1280×1024
+export metadata for the compact
+candidates after the 1280×832 resize request; the accepted candidates therefore
+demonstrate the 832px above-the-fold pressure target inside Stitch's desktop frame, as
+recorded in the handoff.
+
+The 9 August 2026 pre-approval audit replaced four viewport-ambiguous desktop
+candidates with exact 1440×1024 exports and replaced the Life Note with a durable,
+spec-complete export. All five replacements passed independent audits. Their IDs,
+evidence, and the correction delete manifest are recorded in
+`docs/design/stitch-handoff.md`. Post-correction cleanup reports exactly 23 visible
+Task 5 candidates, every historical and correction delete target hidden, and zero
+unexplained Task 5 instances. The owner explicitly approved Gate D3 on 9 August 2026;
+Task 6 responsive design production is unblocked. Application implementation remains
+blocked until Gate D5.
 
 ## Task 6: Design mobile and tablet recompositions
 
@@ -458,9 +505,9 @@ icons. Add or adjust scrims instead of relying on one favourable crop.
 - [ ] **Step 3: Review design-system consistency**
 
 Inspect active screens for colours, type styles, spacing, radii, shadows, icon
-strokes, and motion values. Move rejected exploration to the `09 Archive` screen
-group. Update `DESIGN.md` for approved recurring changes, lint it, and resynchronise
-the foundations screen group.
+strokes, and motion values. Record rejected exploration IDs and reasons in the
+repository, then delete those screens from Stitch. Update `DESIGN.md` for approved
+recurring changes, lint it, and resynchronise the foundations screen group.
 
 - [ ] **Step 4: Review all release states**
 
@@ -516,7 +563,15 @@ npx @google/design.md lint DESIGN.md --format text
 
 Expected: zero errors and zero warnings.
 
-- [ ] **Step 4: Record Gate D5**
+- [ ] **Step 4: Clean and reconcile the final Stitch board**
+
+Build a final keep manifest from the approved foundations, components, route families,
+responsive compositions, prototype states, and accessibility evidence. Record every
+rejected or superseded ID in the repository, delete all non-authoritative screens and
+temporary registries from Stitch, then compare the retrieved project inventory with
+the manifest. Expected: zero unexplained screens and no archive-only screen remaining.
+
+- [ ] **Step 5: Record Gate D5**
 
 In `docs/design/stitch-handoff.md`, record:
 
@@ -529,13 +584,13 @@ In `docs/design/stitch-handoff.md`, record:
 - Explicitly deferred ideas
 - Final `DESIGN.md` commit
 
-- [ ] **Step 5: Reconcile the foundation plan**
+- [ ] **Step 6: Reconcile the foundation plan**
 
 Confirm its token examples, screen assumptions, tests, and component boundaries match
 the approved Google Stitch handoff. Edit the plan before coding if any accepted Google Stitch decision
 changed those details.
 
-- [ ] **Step 6: Commit the design handoff**
+- [ ] **Step 7: Commit the design handoff**
 
 ```bash
 git add DESIGN.md docs/design docs/superpowers/plans
