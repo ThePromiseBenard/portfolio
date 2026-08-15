@@ -458,6 +458,54 @@ mobile compact viewport:
 All 8 screens strictly implement normative `DESIGN.md` tokens, 44px minimum touch targets,
 48px button heights, and WCAG AA contrast against Graphite `#0B0D10`.
 
+### Task 6 Step 2 completed — 15 August 2026
+
+Step 2 recomposes all nine deep routes and utility screens for the 390×844 mobile compact
+viewport:
+
+- `05D1 High-fi compact — Systems index`:
+  `projects/15622483747994955838/screens/2b59a75227744a0780a83ac21670e4e7`
+  (Floating translucent navigation capsule with Signal Cyan active dot, category filter
+  chips, stacked Surface `#12161B` cards with 1px keylines, performance metrics, and
+  `Read field report →` links).
+- `05D2 High-fi compact — Engineering Notes index`:
+  `projects/15622483747994955838/screens/e52295a5d5094e6ab5a6114b50472e56`
+  (Topic filter chips, vertical technical cards stack with IBM Plex Mono metadata readouts,
+  Bricolage Grotesque titles, and `Read note →` actions).
+- `05D3 High-fi compact — Life Notes index`:
+  `projects/15622483747994955838/screens/18f6e77643b44ac08a5fd22c1655202c`
+  (Theme filters, editorial reflections stack with open leading, calm typography, and
+  tactile metadata tags).
+- `05E1 High-fi compact — System field report`:
+  `projects/15622483747994955838/screens/d5ee78114531442f82ffa0612276351e`
+  (Sticky reading header with `← Systems Index` back action, executive snapshot metrics,
+  accessible vertical flow topology diagram with text alternative note, sharded architecture
+  decisions, 2px Incident Orange `#EF8354` retrospective callout, and 48px next report CTA).
+- `05E2 High-fi compact — Engineering Note detail`:
+  `projects/15622483747994955838/screens/4d45ef93d9b741c4ac92eec5c1587d20`
+  (Sticky reading bar, monospaced jump links bar, high-contrast Instrument Sans reading
+  body, syntax-framed Go code block with Copy button, Surface-raised invariant callout, and
+  sequential next note navigation).
+- `05E3 High-fi compact — Life Note detail`:
+  `projects/15622483747994955838/screens/b61db7363b004147b41c02ebec40fa4b`
+  (Sticky header, 1.65 leading editorial prose, Bricolage Grotesque pull quote with Signal
+  Cyan left accent, polaroid-style analog log media frame, and next essay button).
+- `05F1 High-fi compact — About deep route`:
+  `projects/15622483747994955838/screens/76d8f9c3671c4eddb40dc09af7cec024`
+  (Deep route profile with working session media frame, three core engineering tenets
+  breakdown, 2026 research focus tags, 48px Signal Cyan primary CTA, and résumé download).
+- `05F2 High-fi compact — Connect deep route`:
+  `projects/15622483747994955838/screens/c3e2e6949c8b4c979343e65a47dafdc5`
+  (Origin return header, dedicated Surface cards for verified email with compose/copy
+  actions, 30-minute advisory booking, network links, and dossier download).
+- `05G1 High-fi compact — 404 Not Found`:
+  `projects/15622483747994955838/screens/51393a22a15a4639a9dcd48756b7eb4e`
+  (Incident Orange `#EF8354` route exception readout, monumental 56px headline, diagnostic
+  node telemetry terminal card, and prominent `← Return to Home Stage` primary CTA).
+
+All 9 deep-route mobile screens strictly adhere to `DESIGN.md` tokens, 44px minimum touch
+targets, 48px button heights, and WCAG AA contrast.
+
 ## Task 1 screen record
 
 The authoritative `00 Cover & brief` screen is

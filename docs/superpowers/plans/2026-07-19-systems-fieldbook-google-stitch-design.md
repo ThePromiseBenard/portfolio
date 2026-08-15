@@ -436,7 +436,7 @@ Use a dedicated mobile image crop, compact navigation, two- or three-line headin
 near-full-viewport workspaces, stronger reading scrims, safe-area spacing, visible
 scroll cues, and tap-first interactions. Do not merely scale the desktop screens.
 
-- [ ] **Step 2: Recompose deep routes at 390px**
+- [x] **Step 2: Recompose deep routes at 390px**
 
 Create Systems index, system report, Engineering Notes index and detail, Life Notes
 index and detail, About, Connect, and 404. Replace wide topology with vertical flows or
