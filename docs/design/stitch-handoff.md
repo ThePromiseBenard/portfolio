@@ -415,6 +415,49 @@ therefore complete, and Task 6 mobile/tablet recomposition may begin. This appro
 for continued design production only; application implementation remains blocked until
 Gate D5.
 
+## Task 6 mobile and tablet recomposition record
+
+### Task 6 Step 1 completed — 15 August 2026
+
+Step 1 recomposes all seven homepage scenes plus fallback treatment for the 390×844
+mobile compact viewport:
+
+- `05A1 High-fi compact — Home (photo treatment)`:
+  `projects/15622483747994955838/screens/32e9def9d6064719805373d0c04f1bf2`
+  (Vertical mobile portrait crop, Bricolage Grotesque 56px headline, Instrument Sans
+  subhead, stacked 48px pill CTAs, tactile pinned note preview).
+- `05A2 High-fi compact — Home (fallback treatment)`:
+  `projects/15622483747994955838/screens/5ec17a99815b444e8c04bef636ecea4e`
+  (Deterministic fallback stage on Graphite `#0B0D10` with coordinate telemetry,
+  topology wireframe, and technical metrics readout container).
+- `05B1 High-fi compact — Systems gallery`:
+  `projects/15622483747994955838/screens/d5ce4d6ba58f4d82858f910b20b5c2c0`
+  (Stacked near-full-viewport Surface `#12161B` cards for 3 featured systems with
+  category tags, outcome summaries, mono metadata, tech badges, and `Open field report →`
+  CTAs).
+- `05B2 High-fi compact — Experience timeline`:
+  `projects/15622483747994955838/screens/2ea203ca28614eb99992d830b88d7841`
+  (Vertical mobile timeline stack with connected keylines, role ownership summaries,
+  impact bullet points, tech tags, and related report links).
+- `05B3 High-fi compact — Engineering Notes preview`:
+  `projects/15622483747994955838/screens/6293849d3afa490daba0a4363f3ed724`
+  (Vertical stack of 4 technical note cards with topic readouts, timestamps, reading
+  times, and link to complete index).
+- `05B4 High-fi compact — Life Notes preview`:
+  `projects/15622483747994955838/screens/82a7f534dfd346a3b805af76095141a4`
+  (Editorial reflections stack with open spacing, calm typography, and minimal mono tags).
+- `05B5 High-fi compact — About scene`:
+  `projects/15622483747994955838/screens/f42e1032e1c744cebfce4d884f8eaef9`
+  (Compact biography, three core engineering philosophy tenets, 2026 exploration tags,
+  tactile working session media frames, and direct navigation links).
+- `05C1 High-fi compact — Connect scene`:
+  `projects/15622483747994955838/screens/c2e546de825347ca88cbdbc5d42bacb7`
+  (Dedicated mobile overlay on Graphite scrim, primary email card with copy/compose
+  actions, calendar sync card, social channels, résumé download, and origin return note).
+
+All 8 screens strictly implement normative `DESIGN.md` tokens, 44px minimum touch targets,
+48px button heights, and WCAG AA contrast against Graphite `#0B0D10`.
+
 ## Task 1 screen record
 
 The authoritative `00 Cover & brief` screen is

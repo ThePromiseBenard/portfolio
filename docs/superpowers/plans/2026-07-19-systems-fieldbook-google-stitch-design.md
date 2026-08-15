@@ -430,7 +430,7 @@ blocked until Gate D5.
 
 **Google Stitch screen group:** `05 High-fidelity compact`
 
-- [ ] **Step 1: Recompose all homepage scenes at 390×844**
+- [x] **Step 1: Recompose all homepage scenes at 390×844**
 
 Use a dedicated mobile image crop, compact navigation, two- or three-line headings,
 near-full-viewport workspaces, stronger reading scrims, safe-area spacing, visible
