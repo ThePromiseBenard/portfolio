@@ -448,7 +448,7 @@ Test navigation, stage/workspace balance, diagrams, table overflow, sticky readi
 header, and Connect. Choose either compact or desktop composition per screen based on
 content behaviour rather than device naming.
 
-- [ ] **Step 4: Stress-test content**
+- [x] **Step 4: Stress-test content**
 
 Create variants for 200% zoom, longest plausible project title, six technology labels,
 multi-line role names, long summaries, missing optional image, and a 12-step sequence
