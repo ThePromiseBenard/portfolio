@@ -37,7 +37,7 @@ All design-production completion recorded before this reset is invalidated:
 - Tasks 1 and 2 in Plan 0 are reset to pending.
 - No prior design gate carries forward.
 - No previous external design artifact is an approved composition or interaction
-  authority.
+   authority.
 - Design production restarts with Task 1 in the existing order.
 
 ## Planned Stitch screen-group inventory
@@ -505,6 +505,45 @@ viewport:
 
 All 9 deep-route mobile screens strictly adhere to `DESIGN.md` tokens, 44px minimum touch
 targets, 48px button heights, and WCAG AA contrast.
+
+### Task 6 Step 3 completed — 15 August 2026
+
+Step 3 validates and recomposes six key layouts for the 768×1024 tablet viewport, choosing
+between compact and expanded grid structures based on content behaviour rather than rigid
+device classification:
+
+- `05T1 High-fi tablet — Home stage`:
+  `projects/15622483747994955838/screens/3f93f94d44ab4897af8cddfc198ac4c9`
+  (Balanced 2-column hero stage layout, floating navigation capsule with active Signal Cyan
+  indicator, environmental systems architect portrait, overlapping tactile pinned note, and
+  bottom telemetry node readout).
+- `05T2 High-fi tablet — Systems gallery`:
+  `projects/15622483747994955838/screens/f002e54f14894a6199bd4454d93e8a5c`
+  (2-column responsive layout of Surface `#12161B` system cards with 16px corner radii, 1px
+  keylines, category filter chips, performance metrics, and Signal Cyan field report actions).
+- `05T3 High-fi tablet — System field report`:
+  `projects/15622483747994955838/screens/76e176e1066b4334a2ead2d622df6eb0`
+  (Sticky reading header with `← Systems Index` affordance, 3-column executive snapshot
+  metrics, contained horizontal topology diagram with accessible text alternative, multi-region
+  sharding decisions, 2px Incident Orange `#EF8354` retrospective callout, and 48px next report
+  CTA).
+- `05T4 High-fi tablet — Engineering Notes index`:
+  `projects/15622483747994955838/screens/f138c53103a54d86874180e8c0cfd7c4`
+  (Topic filter chips, structured 2-column grid of technical notes with IBM Plex Mono metadata
+  readouts, Bricolage Grotesque titles, and `Read note →` actions).
+- `05T5 High-fi tablet — Life Notes detail`:
+  `projects/15622483747994955838/screens/cac18e2de7cd411db063bef35f823d48`
+  (Sticky glass reading header, 640px optimal measure reading prose in Instrument Sans with
+  1.65 line-height, Bricolage Grotesque pull quote with 2px Signal Cyan left accent, tactile
+  analog notebook media frame, and 48px next essay button).
+- `05T6 High-fi tablet — Connect overlay`:
+  `projects/15622483747994955838/screens/fe75ef2dbee443df984e54672c0f3669`
+  (60% Graphite scrim overlay, 2-column communication workspace with direct email card, 48px
+  Signal Cyan primary compose action, 30-minute advisory booking card, verified networks list,
+  and PDF dossier download).
+
+All 6 tablet layouts strictly conform to normative `DESIGN.md` tokens, 44px minimum touch
+targets, 48px standard button heights, and WCAG AA contrast.
 
 ## Task 1 screen record
 

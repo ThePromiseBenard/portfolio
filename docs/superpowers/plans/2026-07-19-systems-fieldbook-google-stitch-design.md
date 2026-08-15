@@ -442,7 +442,7 @@ Create Systems index, system report, Engineering Notes index and detail, Life No
 index and detail, About, Connect, and 404. Replace wide topology with vertical flows or
 an intentionally contained horizontal region plus nearby text alternative.
 
-- [ ] **Step 3: Validate 768×1024 tablet layouts**
+- [x] **Step 3: Validate 768×1024 tablet layouts**
 
 Test navigation, stage/workspace balance, diagrams, table overflow, sticky reading
 header, and Connect. Choose either compact or desktop composition per screen based on
